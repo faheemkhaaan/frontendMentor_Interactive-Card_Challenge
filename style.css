@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(images/bg-main-desktop.png);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    font-size: 18px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.card-front{
+    width: 350px;
+    height: 200px;
+    background-image: url('images/bg-card-front.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+.picture{
+   width: 100%;
+   padding: 0px 30px;
+   display: flex;
+   align-items: center;
+}
+.white-circle{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.small-circle{
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    margin: 0px 10px;
+}
+.card-number{
+    font-size: 1.9em;
+    width: 100%;
+    text-align: center;
+}
+.card-front .card-user-info{
+    /* align-self:flex-end; */
+    justify-self: flex-start;
+    width: 100%;
+    justify-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    font-size: .9em;
+}
+.card-back{
+    width: 350px;
+    height: 200px;
+    background-image: url('images/bg-card-back.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 15px;
+    align-self: flex-end;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.num{
+    width: 84%;
+    padding: 5px;
+    text-align: right;
+    color: white;
+    font-weight: 800;
+}
+
+.right{
+    width: 50%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right form{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.form-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form-content label{
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+.form-content input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    border: 1px solid hsl(249, 99%, 64%);
+    font-size: 18px;
+}
+.form-content input:focus{
+    border: 1px solid hsl(278, 94%, 30%);
+}
+
+.date-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    
+
+}
+.date-heading{
+}
+.date{
+    width: 50px;
+}
+.date-top{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.date-top input{
+    width: 50%;
+}
+.input-values{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-basis: 1;
+    position: relative;
+    /* justify-content: space-between; */
+
+} 
+
+.input-values  input{
+    width: 100%;
+}
+
+ #month{
+    flex-basis: 1;
+    width: 48%;
+}
+#year{
+    flex-basis: 1;
+    width: 48%;
+}
+#cvc{
+    position: relative;
+} 
+
+.confirm{
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color:  hsl(278, 68%, 11%);
+    color: white;
+}
+
+.completed-state{
+    width: 402px;
+    height: 310px;
+    position: absolute;
+    top: 170px;
+    left: 61%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 5px;
+    z-index: -4;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+}
+.hiddenCompletedState{
+    opacity: 1;
+    z-index: 4;
+}
+#continue{
+    width: 50%;
+    padding: 10px;
+    background-color:  hsl(278, 68%, 11%);
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+}
+#check-icon{
+    width: 60px;
+}
+.required-input{
+    /* display: none; */
+    color: red;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    font-size: .8em;
+    /* text-align: center; */
+        
+}
+
+
+@media (max-width: 957px){
+    .completed-state {
+        width: 340px;
+        top: 170px;
+        left: 51%;
+    }
+}
